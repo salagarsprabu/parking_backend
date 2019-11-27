@@ -16,7 +16,7 @@ pipeline {
       steps {
         sh '''
         mvn clean deploy sonar:sonar -Dmaven.test.skip=true
-        tar -czvf $JOB_NAME.tar.gz $WORKSPACE/
+        tar -czvf $JOB_NAME.tar.gz .
         '''
       }
     }   
