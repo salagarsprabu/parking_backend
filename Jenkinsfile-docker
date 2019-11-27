@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git branch: 'master', url : 'https://github.com/Sushant227/parking_backend.git'
+        git branch: 'master', url : 'https://github.com/devopsdemo-in/parking_backend.git'
       }
     }
     stage('Build and Deploy') {
