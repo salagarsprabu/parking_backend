@@ -14,7 +14,10 @@ pipeline {
     }
     stage('Build and Deploy') {
       steps {
-        sh "mvn clean deploy sonar:sonar -Dmaven.test.skip=true"
+        sh '''
+        mvn clean deploy sonar:sonar -Dmaven.test.skip=true
+        tar -czvf parkingbackend.tar.gz $WORKSPACE/
+        '''
       }
     }   
     stage('Building image') {
