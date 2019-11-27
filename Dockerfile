@@ -5,4 +5,4 @@ COPY PARKING_BACKEND_PIPELINE.tar.gz /opt/.
 RUN tar -xvzf PARKING_BACKEND_PIPELINE.tar.gz
 RUN cd PARKING_BACKEND_PIPELINE/target/
 ENTRYPOINT ["java", "-jar"]
-CMD ["*.jar"]
+CMD ["parking-0.0.1-SNAPSHOT.jar"]
